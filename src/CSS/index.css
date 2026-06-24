@@ -1,5 +1,37 @@
+body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+
+#app {
+        background: white;
+        padding: 3rem;
+        border-radius: 10px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        max-width: 500px;
+}
+
 p {
     color: #666;
     margin-top: 1rem;
     font-size: 0.9rem;
+}
+
+button {
+    color: white;
+    background-color: black;
+
+    width: 100px;
+    height: 50px;
+
+    margin-top: 20px;
+    
+    border: solid 1px black;
+    border-radius: 5px;
 }
