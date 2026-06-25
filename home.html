@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />    <link rel="stylesheet" href="/src/CSS/main.css">
+    <link rel="stylesheet" href="/src/CSS/home.css">
     <title>Teacher Academy-Welcome Page</title>
 </head>
 <body>
+    <div id="menuWrapper">
+        <button id="menuButton"><span class="material-symbols-outlined" id="menuIcon">arrow_forward_ios</span></button>
+        <div id="menuOptions">
+            <a href="dashboard.html"><span class="material-symbols-outlined" class="menuOption">home</span>Dashboard</a>
+            <a href="courses.html"><span class="material-symbols-outlined" class="menuOption">school</span>Courses</a>
+            <a href="resources.html"><span class="material-symbols-outlined" class="menuOption">shelves</span>Resources</a>
+            <a href="notifications.html"><span class="material-symbols-outlined" class="menuOption">notifications</span>Notifications</a>
+
+            <hr>
+
+            <a href="login.html"><span class="material-symbols-outlined" class="menuOption">login</span>Login</a>
+            <button id="darkmode"><span class="material-symbols-outlined" class="menuOption">nightlight</span>Dark Mode</button>
+        </div>
+    </div>
     <header>
         <h1>Welcome to the SPED Teacher Academy</h1>
         <p>This is a simple HTML5 page.</p>
@@ -16,7 +32,10 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2026 Learning Center</p>
+        <a href="about.html">about</a>
+        <a href="contact.html">contact</a>
+        <a href="privacy.html">privacy</a>
+        <a href="index.html">terms</a>
     </footer>
 </body>
 </html>

@@ -1,0 +1,42 @@
+#menuWrapper{
+
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1;
+
+    overflow: hidden;
+
+    height: 100vh;
+    width: 50px;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#menuButton{
+    display:flex;
+    align-items: center;
+    float: right;
+
+    background-color: black;
+
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+#menuIcon {
+    color: white;
+    text-align: center;
+}
+
+#menuOptions a{
+    display: block;
+    text-decoration: none;
+
+    padding: 10px;
+}
+
+.menuOption{
+    display: inline-block;
+    padding: 5px;
+}
