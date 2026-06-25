@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    color: black;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer a:hover{
+    transition: transform 0.3s ease-in-out;
+}
+
+footer a:visited{
+    color: black;
+}
