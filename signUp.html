@@ -4,26 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/CSS/entryForm.css">
     <title>Sign Up</title>
 </head>
 
 <body>
-    <div class="signup-container">
+    <div class="entryForm-container">
         <h1>Create Account</h1>
 
-        <form action="/login" method="POST">
+        <form action="/signup" method="POST" id="signupForm">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             <br>
             <label for="password">Password:</label>
             <input autocomplete="current-password" type="password" id="password" name="password" required>
             <br>
-            <button type="submit">Login</button>
+            <button type="submit">Sign Up</button>
         </form>
-        <footer>
-            <p class="footer-text">Already have an account? <a href="#">Log in</a></p>
-        </footer>
     </div>
+
+    <footer>
+        <p class="footer-text">Already have an account? <a href="/login">Log in</a></p>
+    </footer>
 </body>
 
 </html>
