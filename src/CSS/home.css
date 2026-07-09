@@ -1,11 +1,13 @@
-#menuWrapper{
-
+#menuWrapper {
+    display: flex;
+    flex-direction: column;
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     z-index: 1;
 
     overflow: hidden;
+    transition:0.5s;
 
     height: 100vh;
     width: 50px;
@@ -13,15 +15,23 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-#menuButton{
-    display:flex;
+#menuButton {
+    display: flex;
     align-items: center;
-    float: right;
+    justify-content: center;
 
     background-color: black;
 
+    width: 30px;
+    height: 30px;
+
     border: 1px solid black;
     border-radius: 100%;
+    margin: 10px;
+}
+
+button:hover{
+    cursor: pointer;
 }
 
 #menuIcon {
@@ -29,14 +39,24 @@
     text-align: center;
 }
 
-#menuOptions a{
-    display: block;
+#menuOptions a,
+button {
+    display: flex;
+    align-items: center;
     text-decoration: none;
-
-    padding: 10px;
+    color: black;
 }
 
-.menuOption{
+#darkmode {
+    border: none;
+    background-color: transparent;
+}
+
+#darkmode span {
+    padding-left: 13px !important;
+}
+
+.menuOption {
     display: inline-block;
-    padding: 5px;
+    padding: 10px 20px 10px 15px;
 }
