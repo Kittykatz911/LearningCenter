@@ -17,7 +17,7 @@ if (app) {
     button.textContent = 'Let\'s Go!';
     app.appendChild(button);
     button.addEventListener('click', () => {
-        location.href = 'home.html';
+        location.href = 'login.html';
     });
 }
 
