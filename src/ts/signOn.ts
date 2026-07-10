@@ -21,6 +21,16 @@ async function handleSignup(formData: {
         return;
     }
     console.log('Signup successful:', data.user);
+
+    // clear the form fields after successful signup:
+    (document.getElementById('name') as HTMLInputElement).value = '';
+    (document.getElementById('lastName') as HTMLInputElement).value = '';
+    (document.getElementById('email') as HTMLInputElement).value = '';
+    (document.getElementById('username') as HTMLInputElement).value = '';
+    (document.getElementById('password') as HTMLInputElement).value = '';
+
+    //rerdirect to the login page:
+    window.location.href = '/login.html';
 }
 
 signupForm.addEventListener('submit', (event) => {
