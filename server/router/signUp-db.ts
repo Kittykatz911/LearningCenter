@@ -35,3 +35,35 @@ router.post('/signup', async (req, res) => {
 });
 
 export default router;
+
+router.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  if (!username || !password) {
+    return res.status(400).json({ error: 'Missing username or password' });
+  }
+
+  try {
+    const result = await pool.query(
+      `SELECT email, username, password
+       FROM users
+       WHERE username = $1`,
+      [username]
+    );
+    if (result.rows.length === 0) {
+      return res.status(401).json({ error: 'Invalid username or password' });
+    }
+
+    const user = result.rows[0];
+    const isMatch = await bcrypt.compare(password, user.password);
+
+    if (!isMatch) {
+      return res.status(401).json({ error: 'Invalid username or password' });
+    }
+
+    res.status(200).json({ user: { email: user.email, username: user.username } });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Something went wrong' });
+  }
+});
