@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-woff/Lato-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Cormorant_Garamond-italic';
+    src: url('../fonts/CormorantGaramond-woff/static/CormorantGaramond-Italic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Poppins-semiBold';
+    src: url('../fonts/Poppins-woff/Poppins-SemiBold.woff') format('woff');
+}
+
 body {
     display: flex;
     justify-content: center;
