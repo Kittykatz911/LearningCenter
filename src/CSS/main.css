@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'Cormorant_Garamond-italic';
-    src: url('../fonts/CormorantGaramond-woff/static/CormorantGaramond-Italic.woff') format('woff');
+    src: url('../fonts/Cormorant_Garamond-woff/static/CormorantGaramond-Italic.woff') format('woff');
 }
 
 @font-face {
@@ -17,6 +17,7 @@ body {
     display: flex;
     justify-content: center;
 
+    font: 18px 'Lato';
     color: black;
     background-color: #fff2e6;
 
@@ -26,6 +27,10 @@ body {
     margin: 0;
 }
 
+h1 {
+    font-family: 'Poppins-semiBold';
+}
+
 .content {
     padding-left: 70px;
 }
@@ -33,7 +38,7 @@ body {
 footer {
     display: flex;
 
-    font-family: 'Cormorant_Garamond-italic';
+    font: 18px 'Cormorant_Garamond-italic';
 
     position: absolute;
     bottom: 0;
@@ -44,7 +49,6 @@ footer {
 }
 
 footer a {
-    font-family: 'Cormorant_Garamond-italic';
     text-decoration: none;
     color: black;
 }
