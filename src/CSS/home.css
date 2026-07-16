@@ -20,22 +20,17 @@
     align-items: center;
     justify-content: center;
 
-    background-color: black;
+    background-color: transparent;
 
     width: 30px;
     height: 30px;
 
-    border: 1px solid black;
-    border-radius: 100%;
+    border: none;
     margin: 10px;
 }
 
-button:hover {
-    cursor: pointer;
-}
-
 #menuIcon {
-    color: white;
+    color: gray;
     text-align: center;
 }
 
@@ -47,18 +42,18 @@ button {
     color: black;
 }
 
-#darkmode {
-    border: none;
-    background-color: transparent;
-}
-
-#darkmode span {
-    padding-left: 13px !important;
+button:hover {
+    cursor: pointer;
 }
 
 .menuOption {
     display: inline-block;
     padding: 10px 20px 10px 15px;
+}
+
+#menuOptions a:hover,
+#menuOptions button:hover {
+    background-color: #f0f0f0;
 }
 
 #pages-wrapper>a,
@@ -75,4 +70,14 @@ button {
 
 .page-links {
     padding: 10px 20px 10px 15px;
+}
+
+#darkmode {
+    border: none;
+    background-color: transparent;
+    width: 170px;
+}
+
+#darkmode span {
+    padding-left: 11px !important;
 }
