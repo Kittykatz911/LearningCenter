@@ -63,21 +63,40 @@ button:hover {
 }
 
 #pages-wrapper {
+    display: flex;
+    flex-direction: column;
+
     height: 0px;
     overflow: hidden;
-    transition: height 2s;
+
+    transition: height 2s ease;
+}
+
+#pages-wrapper span {
+    float: right;
+    padding: 0px;
 }
 
 .page-links {
     padding: 10px 20px 10px 15px;
 }
 
+.sublinks {
+    display: none;
+}
+
 #darkmode {
     border: none;
     background-color: transparent;
     width: 170px;
+
+    font: 18px 'Lato';
 }
 
 #darkmode span {
     padding-left: 11px !important;
+}
+
+.content {
+    transition: padding-left 0.5s;
 }
