@@ -10,7 +10,7 @@ menuButton?.addEventListener("click", () => {
 
     if (navBar.style.width === "170px") {
         navBar.style.width = defaultWidth;
-        menuArrow.textContent = "arrow_forward_ios";
+        menuArrow.textContent = "menu";
         menuArrow.style.paddingLeft = "";
 
         pagesWrapper.style.width = "";
