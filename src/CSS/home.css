@@ -98,5 +98,31 @@ button:hover {
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
     transition: padding-left 0.5s;
+}
+
+.content header {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.content h1 {
+    margin-bottom: 0px;
+}
+
+.content h1 span {
+    color: #dc143c;
+
+}
+
+.content h2 {
+    font-family: 'Poppins-semiBold';
+
+    margin-top: 0px;
 }
