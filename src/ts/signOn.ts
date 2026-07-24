@@ -57,38 +57,42 @@ async function handleLogin(formData: {
     window.location.href = '/home.html';
 }
 
-signupForm.addEventListener('submit', (event) => {
-    event.preventDefault(); // stops the button from submitting/reloading the page if it's inside a <form>
-    console.log('Signup submitting');
+if (signupForm) {
+    signupForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // stops the button from submitting/reloading the page if it's inside a <form>
+        console.log('Signup submitting');
 
-    const firstNameInput = document.getElementById('name') as HTMLInputElement;
-    const lastNameInput = document.getElementById('lastName') as HTMLInputElement;
-    const emailInput = document.getElementById('email') as HTMLInputElement;
-    const usernameInput = document.getElementById('username') as HTMLInputElement;
-    const passwordInput = document.getElementById('password') as HTMLInputElement;
+        const firstNameInput = document.getElementById('name') as HTMLInputElement;
+        const lastNameInput = document.getElementById('lastName') as HTMLInputElement;
+        const emailInput = document.getElementById('email') as HTMLInputElement;
+        const usernameInput = document.getElementById('username') as HTMLInputElement;
+        const passwordInput = document.getElementById('password') as HTMLInputElement;
 
-    const formData = {
-        first_name: firstNameInput.value,
-        last_name: lastNameInput.value,
-        email: emailInput.value,
-        username: usernameInput.value,
-        password: passwordInput.value
-    };
+        const formData = {
+            first_name: firstNameInput.value,
+            last_name: lastNameInput.value,
+            email: emailInput.value,
+            username: usernameInput.value,
+            password: passwordInput.value
+        };
 
-    handleSignup(formData);
-});
+        handleSignup(formData);
+    });
+}
 
-loginForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    console.log('Login submitting');
+if (loginForm) {
+    loginForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        console.log('Login submitting');
 
-    const usernameInput = document.getElementById('username') as HTMLInputElement;
-    const passwordInput = document.getElementById('password') as HTMLInputElement;
+        const usernameInput = document.getElementById('username') as HTMLInputElement;
+        const passwordInput = document.getElementById('password') as HTMLInputElement;
 
-    const formData = {
-        username: usernameInput.value,
-        password: passwordInput.value
-    };
+        const formData = {
+            username: usernameInput.value,
+            password: passwordInput.value
+        };
 
-    handleLogin(formData);
-});
+        handleLogin(formData);
+    });
+}
