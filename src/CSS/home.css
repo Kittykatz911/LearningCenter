@@ -83,6 +83,7 @@ button:hover {
 
 .sublinks {
     display: none;
+    padding: 10px 20px 10px 30px;
 }
 
 #darkmode {
