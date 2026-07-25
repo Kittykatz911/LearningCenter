@@ -53,6 +53,8 @@ categories?.forEach((category) => {
             });
             // then make the dropdown content visible
             mouseEvent.preventDefault();
+
+            //Services options
             if (target.parentElement?.classList.contains("services")) {
                 const serviceOptions = document.getElementById("service-options");
                 if (serviceOptions!.style.display === "block") {
@@ -67,24 +69,92 @@ categories?.forEach((category) => {
 
                     target.parentElement!.style.backgroundColor = "white";
                 }
-
             }
+
+            //Assessment and Progress options
             else if (target.parentElement?.classList.contains("aaps")) {
-                target.parentElement!.style.backgroundColor = "white";
-            }
-            else if (target.parentElement?.classList.contains("bookings")) {
-                target.parentElement!.style.backgroundColor = "white";
-            }
-            else if (target.parentElement?.classList.contains("lessonry")) {
-                target.parentElement!.style.backgroundColor = "white";
-            }
-            else if (target.parentElement?.classList.contains("mentors")) {
-                target.parentElement!.style.backgroundColor = "white";
-            }
-            else if (target.parentElement?.classList.contains("professional-development")) {
-                target.parentElement!.style.backgroundColor = "white";
-            }
+                const aapOptions = document.getElementById("aap-options");
+                if (aapOptions!.style.display === "block") {
+                    aapOptions!.style.display = "none";
 
+                    target.parentElement!.style.backgroundColor = "";
+                    aapOptions!.style.backgroundColor = "";
+                }
+                else {
+                    aapOptions!.style.display = "block";
+                    aapOptions!.style.backgroundColor = "white";
+
+                    target.parentElement!.style.backgroundColor = "white";
+                }
+            }
+                
+            //Booking options
+            else if (target.parentElement?.classList.contains("bookings")) {
+                const bookingOptions = document.getElementById("booking-options");
+                if (bookingOptions!.style.display === "block") {
+                    bookingOptions!.style.display = "none";
+
+                    target.parentElement!.style.backgroundColor = "";
+                    bookingOptions!.style.backgroundColor = "";
+                }
+                else {
+                    bookingOptions!.style.display = "block";
+                    bookingOptions!.style.backgroundColor = "white";
+
+                    target.parentElement!.style.backgroundColor = "white";
+                }
+            }
+            
+            //Lesson options
+            else if (target.parentElement?.classList.contains("lessonry")) {
+                const lessons = document.getElementById("lessons");
+                if (lessons!.style.display === "block") {
+                    lessons!.style.display = "none";
+
+                    target.parentElement!.style.backgroundColor = "";
+                    lessons!.style.backgroundColor = "";
+                }
+                else {
+                    lessons!.style.display = "block";
+                    lessons!.style.backgroundColor = "white";
+
+                    target.parentElement!.style.backgroundColor = "white";
+                }
+            }
+                
+            //Mentor options
+            else if (target.parentElement?.classList.contains("mentors")) {
+                const mentors = document.getElementById("mentors-options");
+                if (mentors!.style.display === "block") {
+                    mentors!.style.display = "none";
+
+                    target.parentElement!.style.backgroundColor = "";
+                    mentors!.style.backgroundColor = "";
+                }
+                else {
+                    mentors!.style.display = "block";
+                    mentors!.style.backgroundColor = "white";
+
+                    target.parentElement!.style.backgroundColor = "white";
+                }
+            }
+                
+            //Professional Development options
+            else if (target.parentElement?.classList.contains("professional-development")) {
+                const developmentLinks = document.getElementById("development-options");
+                if (developmentLinks!.style.display === "block") {
+                    developmentLinks!.style.display = "none";
+
+                    target.parentElement!.style.backgroundColor = "";
+                    developmentLinks!.style.backgroundColor = "";
+                }
+                else {
+                    developmentLinks!.style.display = "block";
+                    developmentLinks!.style.backgroundColor = "white";
+
+                    target.parentElement!.style.backgroundColor = "white";
+                }
+            }
         }
     });
 });
