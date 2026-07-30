@@ -9,7 +9,7 @@ menuButton?.addEventListener("click", () => {
     const links = pagesWrapper.querySelectorAll("a");
     const pageContent = document.querySelector<HTMLElement>(".content")!;
 
-    if (navBar.style.width === "170px") {
+    if (navBar.style.width === "190px") {
         navBar.style.width = defaultWidth;
         pageContent.style.paddingLeft = "70px";
         menuArrow.textContent = "menu";
@@ -22,21 +22,28 @@ menuButton?.addEventListener("click", () => {
             link.style.backgroundColor = "";
             link.style.opacity = "0";
         });
-        pagesWrapper.querySelector("hr")!.style.display = "none";
+
+        //remove hr
+        const hr = menuButton?.parentElement?.querySelector("#menu-divider");
+        hr?.remove();
     }
     else {
-        navBar.style.width = "170px";
+        navBar.style.width = "190px";
         pageContent.style.paddingLeft = "190px";
         menuArrow.textContent = "arrow_back_ios";
         menuArrow.style.paddingLeft = "10px";
 
-        pagesWrapper.style.width = "170px";
-        pagesWrapper.style.height = "350px";
+        pagesWrapper.style.width = "190px";
+        pagesWrapper.style.height = "300px";
         links.forEach((link) => {
             link.style.display = "block";
             link.style.opacity = "1";
         });
-        pagesWrapper.querySelector("hr")!.style.display = "block";
+
+        // add hr divider:
+        const hr = document.createElement("hr");
+        hr.id = "menu-divider";
+        document.getElementById("menuOptions")!.insertBefore(hr, document.getElementById("signOn_button"));
     }
 });
 const categories = document.querySelectorAll<HTMLElement>(".page-links");
@@ -46,113 +53,156 @@ categories?.forEach((category) => {
         const target = mouseEvent.target as HTMLElement;
         if (target.classList.contains("drop")) {
 
+            // reset background if dropdown category is not selected
             categories?.forEach((cat) => {
                 if (cat !== target.parentElement) {
                     cat.style.backgroundColor = "";
                 }
             });
-            // then make the dropdown content visible
+
+            document.querySelectorAll<HTMLElement>(".sublinks")?.forEach((sublink) => {
+                sublink.style.display = "none";
+                sublink.style.backgroundColor = "";
+            });
+
+            // prevent page from loading
             mouseEvent.preventDefault();
 
             //Services options
             if (target.parentElement?.classList.contains("services")) {
                 const serviceOptions = document.getElementById("service-options");
-                if (serviceOptions!.style.display === "block") {
-                    serviceOptions!.style.display = "none";
 
+                //change background of services container (parent) if not already white:
+                if (target.parentElement!.style.backgroundColor === "white") {
                     target.parentElement!.style.backgroundColor = "";
-                    serviceOptions!.style.backgroundColor = "";
                 }
                 else {
+                    target.parentElement!.style.backgroundColor = "white";
+                }
+
+                //reveal the service options:
+                if (target.parentElement!.style.backgroundColor === "white") {
                     serviceOptions!.style.display = "block";
                     serviceOptions!.style.backgroundColor = "white";
-
-                    target.parentElement!.style.backgroundColor = "white";
+                }
+                else {
+                    serviceOptions!.style.display = "none";
+                    serviceOptions!.style.backgroundColor = "";
                 }
             }
 
             //Assessment and Progress options
             else if (target.parentElement?.classList.contains("aaps")) {
                 const aapOptions = document.getElementById("aap-options");
-                if (aapOptions!.style.display === "block") {
-                    aapOptions!.style.display = "none";
-
+                
+                //change background of services container (parent) if not already white:
+                if (target.parentElement!.style.backgroundColor === "white") {
                     target.parentElement!.style.backgroundColor = "";
-                    aapOptions!.style.backgroundColor = "";
                 }
                 else {
+                    target.parentElement!.style.backgroundColor = "white";
+                }
+
+                //reveal the service options:
+                if (target.parentElement!.style.backgroundColor === "white") {
                     aapOptions!.style.display = "block";
                     aapOptions!.style.backgroundColor = "white";
-
-                    target.parentElement!.style.backgroundColor = "white";
+                }
+                else {
+                    aapOptions!.style.display = "none";
+                    aapOptions!.style.backgroundColor = "";
                 }
             }
                 
             //Booking options
             else if (target.parentElement?.classList.contains("bookings")) {
                 const bookingOptions = document.getElementById("booking-options");
-                if (bookingOptions!.style.display === "block") {
-                    bookingOptions!.style.display = "none";
-
+                
+                //change background of services container (parent) if not already white:
+                if (target.parentElement!.style.backgroundColor === "white") {
                     target.parentElement!.style.backgroundColor = "";
-                    bookingOptions!.style.backgroundColor = "";
                 }
                 else {
+                    target.parentElement!.style.backgroundColor = "white";
+                }
+
+                //reveal the service options:
+                if (target.parentElement!.style.backgroundColor === "white") {
                     bookingOptions!.style.display = "block";
                     bookingOptions!.style.backgroundColor = "white";
-
-                    target.parentElement!.style.backgroundColor = "white";
+                }
+                else {
+                    bookingOptions!.style.display = "none";
+                    bookingOptions!.style.backgroundColor = "";
                 }
             }
             
             //Lesson options
             else if (target.parentElement?.classList.contains("lessonry")) {
                 const lessons = document.getElementById("lessons");
-                if (lessons!.style.display === "block") {
-                    lessons!.style.display = "none";
 
+                //change background of services container (parent) if not already white:
+                if (target.parentElement!.style.backgroundColor === "white") {
                     target.parentElement!.style.backgroundColor = "";
-                    lessons!.style.backgroundColor = "";
                 }
                 else {
+                    target.parentElement!.style.backgroundColor = "white";
+                }
+
+                //reveal the service options:
+                if (target.parentElement!.style.backgroundColor === "white") {
                     lessons!.style.display = "block";
                     lessons!.style.backgroundColor = "white";
-
-                    target.parentElement!.style.backgroundColor = "white";
+                }
+                else {
+                    lessons!.style.display = "none";
+                    lessons!.style.backgroundColor = "";
                 }
             }
                 
             //Mentor options
             else if (target.parentElement?.classList.contains("mentors")) {
                 const mentors = document.getElementById("mentors-options");
-                if (mentors!.style.display === "block") {
-                    mentors!.style.display = "none";
 
+                //change background of services container (parent) if not already white:
+                if (target.parentElement!.style.backgroundColor === "white") {
                     target.parentElement!.style.backgroundColor = "";
-                    mentors!.style.backgroundColor = "";
                 }
                 else {
+                    target.parentElement!.style.backgroundColor = "white";
+                }
+
+                //reveal the service options:
+                if (target.parentElement!.style.backgroundColor === "white") {
                     mentors!.style.display = "block";
                     mentors!.style.backgroundColor = "white";
-
-                    target.parentElement!.style.backgroundColor = "white";
+                }
+                else {
+                    mentors!.style.display = "none";
+                    mentors!.style.backgroundColor = "";
                 }
             }
                 
             //Professional Development options
             else if (target.parentElement?.classList.contains("professional-development")) {
                 const developmentLinks = document.getElementById("development-options");
-                if (developmentLinks!.style.display === "block") {
-                    developmentLinks!.style.display = "none";
 
+                //change background of services container (parent) if not already white:
+                if (target.parentElement!.style.backgroundColor === "white") {
                     target.parentElement!.style.backgroundColor = "";
-                    developmentLinks!.style.backgroundColor = "";
                 }
                 else {
+                    target.parentElement!.style.backgroundColor = "white";
+                }
+
+                //reveal the service options:
+                if (target.parentElement!.style.backgroundColor === "white") {
                     developmentLinks!.style.display = "block";
                     developmentLinks!.style.backgroundColor = "white";
-
-                    target.parentElement!.style.backgroundColor = "white";
+                }
+                else {
+                    developmentLinks!.style.display = "none";
+                    developmentLinks!.style.backgroundColor = "";
                 }
             }
         }
