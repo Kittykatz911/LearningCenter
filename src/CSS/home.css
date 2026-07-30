@@ -56,10 +56,14 @@ button:hover {
     background-color: #f0f0f0;
 }
 
-#pages-wrapper>a,
-#pages-wrapper hr {
+#pages-wrapper>a {
     display: none;
     transition: opacity 2s ease;
+}
+
+#pages-wrapper::-webkit-scrollbar {
+    scrollbar-color: transparent transparent;
+    scrollbar-gutter: stable both-edges;
 }
 
 #pages-wrapper {
@@ -68,6 +72,7 @@ button:hover {
 
     height: 0px;
     overflow: hidden;
+    overflow-y: auto;
 
     transition: height 2s ease;
 }
@@ -83,6 +88,7 @@ button:hover {
 
 .sublinks {
     display: none;
+
     padding: 10px 20px 10px 30px;
 }
 
